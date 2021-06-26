@@ -1,0 +1,64 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login{
+    width: 100%;
+    height: 100vh;
+    @include center();
+    flex-direction: column;
+
+    .loginContainer{
+        @include center();
+        .signInLogin{
+            // width: 500px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            h1{
+                text-align: center;
+            }
+            input{
+                transition:  all .2s ease;
+                font-family: Spartan, sans-serif;
+                font-size: 1.2rem;
+                background-color: #1E2139;
+                color: #fff;
+                border: none;
+                margin: 1rem;
+                height: 50px;
+                text-align: center;
+            }
+            input:focus{
+                border: none;
+                outline: 3px solid transparent;
+                border-radius: 10px;
+                box-shadow: 0px -1px 50px 0px rgba(124,93,250,0.75);
+                -webkit-box-shadow: 0px -1px 50px 0px rgba(124,93,250,0.75);
+                -moz-box-shadow: 0px -1px 50px 0px rgba(124,93,250,0.75);
+            }
+
+            button{
+                margin: 1rem;
+                padding: 1rem;
+                cursor: pointer;
+                background-color: #7C5DFA;
+                border-radius: 50px;
+                font-family: Spartan, sans-serif;
+                color: #fff;
+                font-size: 1.2rem;
+                border: none;
+            }
+
+            button:hover{
+                background-color:#7c5dfaad;
+            }
+        
+            button:active{
+                transform: translateY(5px);
+            }
+        }
+    }
+}

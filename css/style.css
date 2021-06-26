@@ -1,0 +1,759 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+#root {
+  width: 100vw; }
+
+.rootContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #141625;
+  font-family: Spartan, sans-serif;
+  overflow-x: hidden; }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #1E2139;
+  overflow-x: hidden;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; }
+  .sidebar .logo {
+    width: 100%;
+    background: #7c5dfa;
+    background: linear-gradient(126deg, #7c5dfa 0%, #4d66d9 49%);
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .sidebar .logo img {
+      width: 40px;
+      cursor: pointer; }
+  .sidebar .downSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .sidebar .downSide .theme {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; }
+      .sidebar .downSide .theme img {
+        pointer-events: none; }
+    .sidebar .downSide .profile {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border-top: 1px solid #7e7979; }
+      .sidebar .downSide .profile img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        pointer-events: none; }
+
+.invoicesContainer {
+  margin-left: 105px;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #141625;
+  color: white; }
+  .invoicesContainer .login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .invoicesContainer .login .loginContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .invoicesContainer .login .loginContainer .signInLogin {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2rem; }
+        .invoicesContainer .login .loginContainer .signInLogin h1 {
+          text-align: center; }
+        .invoicesContainer .login .loginContainer .signInLogin input {
+          transition: all .2s ease;
+          font-family: Spartan, sans-serif;
+          font-size: 1.2rem;
+          background-color: #1E2139;
+          color: #fff;
+          border: none;
+          margin: 1rem;
+          height: 50px;
+          text-align: center; }
+        .invoicesContainer .login .loginContainer .signInLogin input:focus {
+          border: none;
+          outline: 3px solid transparent;
+          border-radius: 10px;
+          box-shadow: 0px -1px 50px 0px rgba(124, 93, 250, 0.75);
+          -webkit-box-shadow: 0px -1px 50px 0px rgba(124, 93, 250, 0.75);
+          -moz-box-shadow: 0px -1px 50px 0px rgba(124, 93, 250, 0.75); }
+        .invoicesContainer .login .loginContainer .signInLogin button {
+          margin: 1rem;
+          padding: 1rem;
+          cursor: pointer;
+          background-color: #7C5DFA;
+          border-radius: 50px;
+          font-family: Spartan, sans-serif;
+          color: #fff;
+          font-size: 1.2rem;
+          border: none; }
+        .invoicesContainer .login .loginContainer .signInLogin button:hover {
+          background-color: #7c5dfaad; }
+        .invoicesContainer .login .loginContainer .signInLogin button:active {
+          transform: translateY(5px); }
+  .invoicesContainer .invoiceIDPage {
+    color: #144f77;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh; }
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer {
+      max-width: 700px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+      color: white; }
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .backBtn {
+      height: 50px;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      margin: 1rem;
+      cursor: pointer; }
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice {
+      height: 100px;
+      background-color: #1E2139;
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      margin: 1rem; }
+      .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBox {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBox .statusDis {
+          background-color: #ff910081;
+          padding: 0.5rem 1rem;
+          border-radius: 25px;
+          margin-left: 1rem; }
+      .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBoxTwo {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBoxTwo div {
+          margin: 0 1rem;
+          padding: 0.5rem 1rem;
+          text-align: center;
+          cursor: pointer;
+          border-radius: 25px;
+          text-transform: capitalize; }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBoxTwo .savePaidBtnBoxTwo {
+          background: #33d6a07e; }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBoxTwo .editBtnBoxTwo {
+          background-color: rgba(214, 210, 188, 0.815); }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBoxTwo .deleteBtnBoxTwo {
+          background-color: rgba(255, 2, 2, 0.815); }
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice {
+      height: 100%;
+      background-color: #1E2139;
+      margin: 1rem;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 2rem; }
+      .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice div {
+        margin: 1rem 0; }
+      .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .idNameAdd {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between; }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .idNameAdd .idNameHash .idYESS {
+          font-size: 1.2rem; }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .idNameAdd .placeIdName div {
+          margin: 0.2rem 1rem;
+          font-size: 0.8rem; }
+      .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .dateAndTimeQtybig {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between; }
+      .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig {
+        width: 100%;
+        border: none; }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig .itemsToDisplaybigheader {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+          justify-content: space-between; }
+          .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig .itemsToDisplaybigheader .nameDisItems {
+            margin-left: 1rem; }
+          .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig .itemsToDisplaybigheader .namesQtyAndStuff {
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig .itemsToDisplaybigheader .namesQtyAndStuff div {
+              margin: 0 1rem; }
+        .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig .amountStuff {
+          display: flex;
+          justify-content: space-between;
+          height: 100%;
+          background-color: #191d3a; }
+  .invoicesContainer .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    /* Safari */
+    animation: spin 2s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+  .invoicesContainer .invoices {
+    max-width: 900px;
+    margin: 2rem auto;
+    height: 100%; }
+    .invoicesContainer .invoices .header {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .invoicesContainer .invoices .header .headerName h1 {
+      font-size: 3rem; }
+    .invoicesContainer .invoices .header .headerFilterSide {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .invoicesContainer .invoices .header .headerFilterSide .customSelectFilter {
+        width: max-content;
+        margin-right: 1rem; }
+        .invoicesContainer .invoices .header .headerFilterSide .customSelectFilter select {
+          outline: 0;
+          box-shadow: none;
+          border: 0;
+          background-color: #141625;
+          cursor: pointer;
+          color: #fff;
+          width: 100%;
+          font-size: 1.2rem;
+          font-family: Spartan, sans-serif;
+          font-weight: 700; }
+      .invoicesContainer .invoices .header .headerFilterSide button {
+        background-color: #7C5DFA;
+        border: none;
+        border-radius: 25px;
+        width: 120px;
+        height: 3.4rem;
+        transition: all .2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 1rem;
+        cursor: pointer; }
+      .invoicesContainer .invoices .header .headerFilterSide button:hover {
+        background-color: #1e2139c5; }
+      .invoicesContainer .invoices .header .headerFilterSide button:active {
+        transform: translateY(5px); }
+      .invoicesContainer .invoices .header .headerFilterSide button img {
+        padding: 0.7rem;
+        width: 40px;
+        background: white;
+        border-radius: 50px;
+        pointer-events: none; }
+      .invoicesContainer .invoices .header .headerFilterSide button span {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        pointer-events: none;
+        color: #fff;
+        font-family: Spartan, sans-serif;
+        font-weight: 700; }
+  .invoicesContainer .invoicesLists {
+    margin-top: 2rem; }
+    .invoicesContainer .invoicesLists .invoicesItem {
+      text-decoration: none;
+      color: #fff;
+      background-color: #1E2139;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      margin: 1rem;
+      border-radius: 10px; }
+      .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxone {
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxone div {
+          margin: 0 1rem;
+          pointer-events: none; }
+          .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxone div span {
+            color: #bdb7b7;
+            pointer-events: none; }
+        .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxone .itemDate {
+          color: #bdb7b7;
+          pointer-events: none; }
+        .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxone .itemName {
+          pointer-events: none; }
+      .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxtwo {
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+        .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxtwo div {
+          margin: 0 1rem; }
+        .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxtwo .invoiceAmount {
+          font-weight: 800; }
+        .invoicesContainer .invoicesLists .invoicesItem .invoicesItemboxtwo .itemAction {
+          background: #33d6a04b;
+          padding: 1rem 2rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #33D69F;
+          font-weight: 800;
+          border-radius: 5px; }
+
+::-webkit-scrollbar {
+  width: 5px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #144f77;
+  border-radius: 10px; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #141625; }
+
+.boxshadowForm {
+  box-shadow: 19px 0px 30px -17px rgba(124, 93, 250, 0.75);
+  -webkit-box-shadow: 19px 0px 30px -17px rgba(124, 93, 250, 0.75);
+  -moz-box-shadow: 19px 0px 30px -17px rgba(124, 93, 250, 0.75); }
+
+.formAdd {
+  transform: translateX(100px); }
+
+.formRemove {
+  transform: translateX(-100%) !important; }
+
+.newForm {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 500px;
+  transform: translateX(-100%);
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #141625;
+  overflow-x: hidden;
+  padding: 2rem;
+  transition: all .2s ease; }
+  .newForm .sideNavProfile {
+    color: #144f77;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%; }
+    .newForm .sideNavProfile #sideNavProfileClose {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      cursor: pointer; }
+    .newForm .sideNavProfile .userNameAndImg {
+      margin-top: 5rem;
+      margin-bottom: 2rem; }
+      .newForm .sideNavProfile .userNameAndImg .userPicBig {
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      .newForm .sideNavProfile .userNameAndImg .userPicBig img {
+        border-radius: 50%; }
+      .newForm .sideNavProfile .userNameAndImg h1 {
+        margin-top: 1rem;
+        color: #7C5DFA; }
+    .newForm .sideNavProfile .numberImp {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline; }
+      .newForm .sideNavProfile .numberImp .stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 10rem;
+        font-weight: 900;
+        font-size: 1rem; }
+        .newForm .sideNavProfile .numberImp .stats h3 {
+          margin-bottom: 2rem;
+          color: white; }
+      .newForm .sideNavProfile .numberImp .paidStats {
+        background: #33d6a07e;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem; }
+      .newForm .sideNavProfile .numberImp .pendingStats {
+        background-color: #ff910081;
+        color: #FFF;
+        padding: 1rem; }
+      .newForm .sideNavProfile .numberImp .DraftStats {
+        background-color: #373b5394;
+        color: #ffffff;
+        padding: 1rem; }
+    .newForm .sideNavProfile .logout {
+      margin-top: 3rem;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      border-radius: 25px;
+      border: none;
+      background-color: #7C5DFA;
+      color: white;
+      font-size: 1rem;
+      font-family: Spartan, sans-serif;
+      font-weight: 900;
+      transition: all .2s ease; }
+    .newForm .sideNavProfile .logout:hover {
+      background-color: #7c5dfaad; }
+    .newForm .sideNavProfile .logout:active {
+      transform: translateY(5px); }
+  .newForm .highLight {
+    color: rgba(124, 93, 250, 0.829); }
+  .newForm .greyBack {
+    color: #b9b5b5; }
+  .newForm .space {
+    background-color: red;
+    margin-top: 5rem; }
+  .newForm .close {
+    color: white;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer; }
+  .newForm .newFormHeading {
+    color: white;
+    font-size: 1rem; }
+  .newForm .formContainer {
+    margin-top: 1rem; }
+    .newForm .formContainer input[type=number]::-webkit-inner-spin-button,
+    .newForm .formContainer input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      margin: 0; }
+    .newForm .formContainer input {
+      transition: all .2s ease;
+      font-family: Spartan, sans-serif;
+      font-size: 1.2rem;
+      background-color: #1E2139;
+      color: #fff; }
+    .newForm .formContainer input:focus {
+      border: none;
+      outline: 3px solid transparent;
+      border-radius: 10px;
+      box-shadow: 0px -1px 50px 0px rgba(124, 93, 250, 0.75);
+      -webkit-box-shadow: 0px -1px 50px 0px rgba(124, 93, 250, 0.75);
+      -moz-box-shadow: 0px -1px 50px 0px rgba(124, 93, 250, 0.75); }
+    .newForm .formContainer h3 {
+      font-size: 1rem; }
+    .newForm .formContainer .addressDiv {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1rem;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .newForm .formContainer .addressDiv .address {
+        height: 2rem;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5px; }
+    .newForm .formContainer .cityDiv {
+      display: flex;
+      width: 100%;
+      margin-top: 1rem; }
+      .newForm .formContainer .cityDiv input {
+        margin-top: 0.5rem;
+        width: 80%;
+        border: none;
+        height: 2rem;
+        border-radius: 10px; }
+      .newForm .formContainer .cityDiv .divFormBillBoxs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+    .newForm .formContainer .billTo {
+      margin-top: 2rem; }
+    .newForm .formContainer .invoiceDateAndPay {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-between; }
+      .newForm .formContainer .invoiceDateAndPay h4 {
+        font-weight: 400; }
+      .newForm .formContainer .invoiceDateAndPay input {
+        width: 3rem;
+        border: none; }
+    .newForm .formContainer .itemListForm {
+      margin-top: 2rem; }
+      .newForm .formContainer .itemListForm .itemsHeader {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0; }
+        .newForm .formContainer .itemListForm .itemsHeader h4 {
+          font-family: 400;
+          color: #807a7a; }
+      .newForm .formContainer .itemListForm .itemsBoxs {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem; }
+        .newForm .formContainer .itemListForm .itemsBoxs input {
+          border: none;
+          width: 20%;
+          font-size: 0.7rem;
+          text-align: center;
+          padding: 0.5rem 0; }
+        .newForm .formContainer .itemListForm .itemsBoxs .delItem {
+          padding: 1rem;
+          cursor: pointer; }
+        .newForm .formContainer .itemListForm .itemsBoxs #itemsBoxsTotal {
+          background-color: transparent; }
+        .newForm .formContainer .itemListForm .itemsBoxs #itemsBoxsName {
+          width: 25%; }
+        .newForm .formContainer .itemListForm .itemsBoxs #itemsBoxsQty {
+          width: 10%; }
+      .newForm .formContainer .itemListForm .itemsBoxsBtn {
+        width: 100%;
+        color: #fff; }
+        .newForm .formContainer .itemListForm .itemsBoxsBtn div {
+          width: 80%;
+          margin: 2rem auto;
+          background-color: #1E2139;
+          height: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          border-radius: 25px;
+          transition: all .2s ease; }
+      .newForm .formContainer .itemListForm .itemsBoxsBtnAdd:hover {
+        background-color: #1e2139c5; }
+      .newForm .formContainer .itemListForm .itemsBoxsBtnAdd:active {
+        transform: translateY(5px); }
+    .newForm .formContainer .itemListBtns {
+      display: flex;
+      justify-content: flex-end; }
+      .newForm .formContainer .itemListBtns button {
+        padding: 1rem;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        margin: 0 1rem;
+        color: white;
+        font-family: Spartan, sans-serif;
+        transition: all .2s ease; }
+      .newForm .formContainer .itemListBtns .cancel {
+        background-color: rgba(255, 2, 2, 0.815); }
+      .newForm .formContainer .itemListBtns .saveChanges {
+        background-color: #7C5DFA; }
+      .newForm .formContainer .itemListBtns .draftBtn {
+        background-color: #9e9e2f; }
+      .newForm .formContainer .itemListBtns button:hover {
+        background-color: #1e2139c5; }
+      .newForm .formContainer .itemListBtns button:active {
+        transform: translateY(5px); }
+
+@media screen and (max-width: 600px) {
+  .rootContainer {
+    flex-direction: column;
+    height: max-content; }
+  .sidebar {
+    width: 100vw;
+    height: 100px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .sidebar .logo {
+      width: 100px;
+      height: 100%; }
+    .sidebar .downSide {
+      flex-direction: row;
+      width: 200px; }
+      .sidebar .downSide div {
+        margin: 0 1rem; }
+      .sidebar .downSide .profile {
+        border-top: none; }
+  .invoicesContainer {
+    height: max-content;
+    margin-left: 0;
+    width: 100vw;
+    margin-top: 100px; }
+    .invoicesContainer .invoices {
+      width: 100%; }
+      .invoicesContainer .invoices .header {
+        width: 100vw;
+        flex-direction: row;
+        padding: 1.2rem; }
+        .invoicesContainer .invoices .header .headerName h1 {
+          font-size: 1.2rem; }
+        .invoicesContainer .invoices .header .headerFilterSide {
+          width: 100%;
+          justify-content: flex-end; }
+        .invoicesContainer .invoices .header .headerFilterSide .customSelectFilter {
+          width: 4.5rem;
+          margin-right: 1.5rem; }
+          .invoicesContainer .invoices .header .headerFilterSide .customSelectFilter select {
+            font-size: 0.7rem; }
+        .invoicesContainer .invoices .header .headerFilterSide button {
+          width: 7rem;
+          margin: 0; }
+          .invoicesContainer .invoices .header .headerFilterSide button img {
+            width: 2rem; }
+          .invoicesContainer .invoices .header .headerFilterSide button span {
+            font-size: 1rem; }
+      .invoicesContainer .invoices .invoicesLists .invoicesItem .invoicesItemboxone {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start; }
+        .invoicesContainer .invoices .invoicesLists .invoicesItem .invoicesItemboxone div {
+          margin: 0.2rem 0; }
+        .invoicesContainer .invoices .invoicesLists .invoicesItem .invoicesItemboxone .itemDate {
+          font-size: 0.9rem; }
+      .invoicesContainer .invoices .invoicesLists .invoicesItem .invoicesItemboxtwo {
+        flex-direction: column; }
+        .invoicesContainer .invoices .invoicesLists .invoicesItem .invoicesItemboxtwo .invoiceAmount {
+          font-size: 1.3rem; }
+        .invoicesContainer .invoices .invoicesLists .invoicesItem .invoicesItemboxtwo .itemAction {
+          padding: 0.5rem 1rem;
+          margin-top: 0.2rem; }
+  .login h1 {
+    text-align: center; }
+  .login .loginContainer {
+    flex-direction: column;
+    padding: 2rem; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer {
+    min-width: 100vw; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice {
+    height: 300px;
+    border-radius: 5px; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice {
+    border-radius: 5px; }
+  .optionContainerInvoice {
+    padding: 0;
+    flex-direction: column; }
+    .optionContainerInvoice div {
+      margin: 1rem 0;
+      padding: 0; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice {
+    padding: 0; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBoxTwo {
+    flex-direction: column;
+    margin-top: 0; }
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBoxTwo div {
+      width: 100%;
+      margin: 0.5rem 0; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .bigDisplayEditInvoice {
+    font-size: 1rem;
+    margin: 0.5rem; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig div {
+    padding: 0; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig .itemsToDisplaybigheader {
+    font-size: 0.7rem;
+    margin: 0; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .dateAndTimeQtybig {
+    flex-direction: column;
+    justify-content: flex-start; }
+  .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .dateAndTimeQtybig {
+    justify-content: flex-start; }
+  .newForm {
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    width: 100vw;
+    margin-top: 100px;
+    margin-bottom: 200px; }
+    .newForm .space {
+      background-color: red;
+      margin-top: 10rem; }
+    .newForm .numberImp .stats {
+      width: 2rem;
+      font-size: 0.6rem;
+      background-color: transparent; }
+    .newForm .sideNavProfile .numberImp .stats h3 {
+      margin-bottom: 0;
+      height: 50px;
+      text-align: center;
+      background-color: transparent !important; }
+    .newForm .newForm .sideNavProfile .sideNavProfile {
+      transition: all .3s ease;
+      transform: translateY(-100px);
+      padding-top: 100px; }
+    .newForm .sideNavProfile #sideNavProfileClosAe {
+      position: absolute;
+      top: 0;
+      right: 0; } }

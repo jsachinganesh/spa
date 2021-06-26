@@ -1,0 +1,161 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.invoiceIDPage{
+    color: #144f77;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+    width: 100vw;
+    min-height: 100vh;
+    .invoiceIDPageContainer{
+        max-width: 700px;
+        // margin: 2rem auto;
+        // background-color:#9edd38;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 2rem;
+        color: white;
+        
+
+    }
+    .invoiceIDPageContainer .backBtn{
+        height:50px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        margin: 1rem;
+        cursor: pointer;
+
+    }
+
+    .invoiceIDPageContainer .optionContainerInvoice{
+        height: 100px;
+        background-color: #1E2139;
+        border-radius: 20px;
+        @include center();
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        margin: 1rem;
+
+        .optionContainerInvoiceBox{
+            @include center();
+            .statusDis{
+                background-color: #ff910081;
+                padding: 0.5rem 1rem;
+                border-radius: 25px;
+                margin-left: 1rem;
+            }
+        }
+
+        .optionContainerInvoiceBoxTwo{
+            @include center();
+            div{
+                margin: 0 1rem;
+                padding: 0.5rem 1rem;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 25px;
+                text-transform: capitalize;
+            }
+
+            .savePaidBtnBoxTwo{
+                background: #33d6a07e;
+                // padding: 1rem;
+                
+            }
+
+            .editBtnBoxTwo{
+                background-color: rgba(214, 210, 188, 0.815);
+            }
+
+            .deleteBtnBoxTwo{
+                background-color: rgba(255, 2, 2, 0.815);
+            }
+        }
+    }
+
+    .invoiceIDPageContainer .bigDisplayEditInvoice{
+        height: 100%;
+        background-color: #1E2139;
+        margin: 1rem;
+        border-radius: 25px;
+
+        @include center();
+        flex-direction: column;
+
+        padding: 2rem;
+        div{
+            margin: 1rem 0;
+        }
+        .idNameAdd{
+            width: 100%;
+            height:100px;
+            // background-color: rgb(42, 83, 81);
+            @include center();
+            justify-content: space-between;
+            .idNameHash{
+                .idYESS{
+                    font-size: 1.2rem;
+                }
+            }
+            .placeIdName{
+                div{
+                    margin: 0.2rem 1rem;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+
+        .dateAndTimeQtybig{
+            width: 100%;
+            height: max-content;
+            // background-color: rgb(40, 58, 165);
+
+            @include center();
+            justify-content: space-between;
+        }
+
+        .itemsToDisplaybig{
+            width: 100%;
+            // box-shadow: 1px -2px 5px 3px rgba(0,0,0,0.26);
+            // -webkit-box-shadow: 1px -2px 5px 3px rgba(0,0,0,0.26);
+            // -moz-box-shadow: 1px -2px 5px 3px rgba(0,0,0,0.26);
+
+            border: none;
+            .itemsToDisplaybigheader{
+                @include center();
+                height: 50px;
+                justify-content: space-between;
+
+                .nameDisItems{
+                    margin-left: 1rem;
+                }
+
+                .namesQtyAndStuff{
+                    @include center();
+                    div{
+                        margin: 0 1rem;
+                    }
+                }
+            }
+
+            .amountStuff{
+                display: flex;
+                justify-content: space-between;
+                // margin: 1rem;
+                height: 100%;
+                background-color: #191d3a;
+            }
+        }
+    }
+
+
+}

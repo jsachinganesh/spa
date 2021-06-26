@@ -1,0 +1,112 @@
+.sideNavProfile{
+    
+    #sideNavProfileClose{
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        cursor: pointer;
+    }
+    color: #144f77;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+
+    width: 100%;
+    height: 100%;
+    .userNameAndImg{ 
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+        // cursor: pointer;
+        // transform: translateY(-100px);
+        .userPicBig{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .userPicBig img{
+            border-radius: 50%;
+            
+            // cursor: pointer;
+        }
+
+        h1{
+            margin-top: 1rem;
+            color:#7C5DFA;
+        }
+    }
+
+    .numberImp{
+        width: 100%;
+        height: max-content;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        // background-color: yellow;
+        .stats{
+            display: flex;
+            justify-content: center;
+            
+            align-items:center ;
+            flex-direction: column;
+            width: 10rem;
+            font-weight: 900;
+            font-size: 1rem;
+            h3{
+                margin-bottom: 2rem;
+               color: white;
+            }
+            
+        }
+
+        .paidStats{
+            background: #33d6a07e;
+            // color: #33D69F;
+            color: white;
+            display: flex;
+            justify-content: center;
+            
+            align-items:center ;
+            flex-direction: column;
+            padding: 1rem;
+
+        }
+
+        .pendingStats{
+            background-color: #ff910081;
+            color:#FFF;
+            padding: 1rem;
+        }
+
+        .DraftStats{
+            background-color: #373b5394;
+            color: #ffffff;
+            padding: 1rem;
+        }
+    }
+    .logout{
+        margin-top: 3rem;
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border-radius: 25px;
+        border: none;
+        background-color:#7C5DFA;
+        color: white;
+        font-size: 1rem;
+        font-family: Spartan, sans-serif;
+        font-weight: 900;
+
+        transition: all .2s ease;
+    }
+
+    .logout:hover{
+        background-color:#7c5dfaad;
+    }
+
+    .logout:active{
+        transform: translateY(5px);
+    }
+    
+
+}

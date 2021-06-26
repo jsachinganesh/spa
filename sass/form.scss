@@ -1,0 +1,253 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxshadowForm{
+    box-shadow: 19px 0px 30px -17px rgba(124,93,250,0.75);
+    -webkit-box-shadow: 19px 0px 30px -17px rgba(124,93,250,0.75);
+    -moz-box-shadow: 19px 0px 30px -17px rgba(124,93,250,0.75);
+}
+
+.formAdd{
+    transform: translateX(100px);
+}
+
+.formRemove{
+    transform: translateX(-100%) !important;
+}
+
+.newForm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    transform: translateX(-100%);
+    height: 100vh;
+    overflow-y: auto;
+    // background-color:#144f77;
+    background-color:#141625;
+    overflow-x: hidden;
+    padding: 2rem;
+    transition:  all .2s ease;
+    @import './sideNav.scss';
+   
+   
+    
+    .highLight{
+        color: rgba(124, 93, 250, 0.829);
+    }
+
+    .greyBack{
+        color: rgb(185, 181, 181);
+    }
+
+    .space{ // for scroll problem in mobile
+        background-color: red;
+        margin-top: 5rem;
+    }
+
+    .close{
+        color: white;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        cursor: pointer;
+    }
+
+    .newFormHeading{
+        color: white;
+        font-size: 1rem;
+    }
+
+    .formContainer{
+        margin-top: 1rem;
+
+        // https://stackoverflow.com/questions/13107118/how-to-remove-the-arrows-from-inputtype-number-in-opera
+        input[type=number]::-webkit-inner-spin-button, 
+        input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            margin: 0; 
+        }
+        
+       
+        input{
+            transition:  all .2s ease;
+            font-family: Spartan, sans-serif;
+            font-size: 1.2rem;
+            background-color: #1E2139;
+            color: #fff;
+        }
+        input:focus{
+            border: none;
+            outline: 3px solid transparent;
+            border-radius: 10px;
+            box-shadow: 0px -1px 50px 0px rgba(124,93,250,0.75);
+            -webkit-box-shadow: 0px -1px 50px 0px rgba(124,93,250,0.75);
+            -moz-box-shadow: 0px -1px 50px 0px rgba(124,93,250,0.75);
+        }
+        h3{
+            font-size: 1rem;
+        }
+        .addressDiv{
+            @include center();
+            margin-top: 1rem;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            .address{
+                height: 2rem;
+                width: 100%;
+                border: none;
+                border-radius: 5px;
+                margin-top: 5px;
+            }
+        }
+        .cityDiv{
+            display: flex;
+            width: 100%;
+            margin-top: 1rem;
+            input{
+                margin-top: 0.5rem;
+                width: 80%;
+                border: none;
+                height: 2rem;
+                border-radius: 10px;
+            }
+
+            .divFormBillBoxs{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+
+        .billTo{
+            margin-top: 2rem;
+        }
+
+        .invoiceDateAndPay{
+            margin: 2rem 0;
+            @include center();
+            justify-content: space-between;
+            h4{
+                font-weight: 400;
+            }
+            
+
+            input{
+                width: 3rem;
+                border:none;
+            }
+        }
+
+        .itemListForm{
+            margin-top: 2rem;
+            .itemsHeader{
+                display: flex;
+                justify-content: space-between;
+                margin: 1rem 0;
+                h4{
+                    font-family: 400;
+                    color: rgb(128, 122, 122);
+                }
+            }
+
+            .itemsBoxs{
+                display: flex;
+                justify-content: space-between;
+                margin-top: 1rem;
+                input{
+                    border:none;
+                    width: 20%;
+                    font-size: 0.7rem;
+                    text-align: center;
+                    padding: 0.5rem 0;
+                }
+                .delItem{
+                    // text-align: center;
+                    padding: 1rem;
+                    cursor: pointer;
+                }
+
+                #itemsBoxsTotal{
+                    background-color: transparent;
+                }
+
+                #itemsBoxsName{
+                    width: 25%;
+                    
+                }
+
+                #itemsBoxsQty{
+                    width: 10%;
+                }
+            }
+
+            .itemsBoxsBtn{
+                width: 100%;
+                color: #fff;
+                div{
+                    width: 80%;
+                    margin: 2rem auto;
+                    background-color: #1E2139;
+                    height: 3rem;
+                    @include center();
+                    cursor: pointer;
+
+                    border-radius: 25px;
+                    transition: all .2s ease;
+                }
+            }
+
+            .itemsBoxsBtnAdd:hover{
+                background-color: #1e2139c5;
+            }
+
+            .itemsBoxsBtnAdd:active{
+                transform: translateY(5px);
+            }
+
+            
+        }
+        .itemListBtns{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                padding: 1rem;
+                border-radius: 50px;
+                border: none;
+                cursor: pointer;
+                margin: 0 1rem;
+                color: white;
+                font-family: Spartan, sans-serif;
+                transition: all .2s ease;
+            }
+
+            .cancel{
+                background-color: rgba(255, 2, 2, 0.815);
+            }
+
+            .saveChanges{
+                background-color: #7C5DFA;
+            }
+
+            .draftBtn{
+                background-color: rgb(158, 158, 47);
+            }
+
+            button:hover{
+                background-color: #1e2139c5;
+            }
+
+            button:active{
+                transform: translateY(5px);
+            }
+        }
+    }
+    
+}

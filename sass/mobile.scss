@@ -1,0 +1,193 @@
+@media screen and (max-width: 600px) {
+    
+    .rootContainer{
+        flex-direction: column;
+        height: max-content;
+    }
+    .sidebar{
+        width: 100vw;
+        height: 100px;
+    
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+    
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        .logo{
+            width: 100px;
+            height:100%;
+        }
+
+        .downSide{
+            flex-direction: row;
+            width:200px;
+            div{
+                margin: 0 1rem;
+            }
+            .profile{
+                border-top: none;
+                
+            }
+        }
+
+    
+    
+    }
+    .invoicesContainer{
+        height:max-content;
+        margin-left:0;
+        width: 100vw;
+        // padding: 2rem;
+        margin-top: 100px;
+
+        
+        
+        .invoices{
+            width: 100%;
+
+            // overflow-y:none;
+            // padding: 2rem;
+            // margin: 0;
+            .header{
+                width: 100vw;
+                flex-direction: row;
+                padding: 1.2rem;
+                
+                .headerName h1{
+                    font-size: 1.2rem;
+                }
+
+                .headerFilterSide{
+                    width: 100%;
+                    justify-content: flex-end;
+                }
+
+                .headerFilterSide .customSelectFilter{
+                    width: 4.5rem;
+                   
+                    margin-right: 1.5rem;
+                    select{
+                        font-size: 0.7rem;
+                        
+                    }
+                }
+
+                .headerFilterSide button{
+                    width: 7rem;
+                    margin: 0;
+                    img{
+                        width: 2rem;
+                    }
+                    span{
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .invoicesLists{
+                .invoicesItem{
+                    .invoicesItemboxone{
+                        flex-direction: column;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        div{
+                            margin: 0.2rem 0;
+                        }
+                        .itemDate{
+                            font-size: 0.9rem;
+                        }
+                    }
+                    .invoicesItemboxtwo{
+                        flex-direction: column;
+                        .invoiceAmount{
+                            font-size: 1.3rem;
+                        }
+                        .itemAction{
+                            padding: 0.5rem 1rem;
+                            margin-top: 0.2rem;
+                        }
+                    }
+                }
+            }
+
+           
+        }
+    }
+
+    .login{
+        h1{
+            text-align: center;
+            // font-size: 1rem;
+        }
+        .loginContainer{
+            flex-direction: column;
+            padding: 2rem;
+            
+        }
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer{
+        min-width: 100vw;
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice{
+        height: 300px;
+        border-radius: 5px;
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice{
+        border-radius: 5px;
+    }
+
+    .optionContainerInvoice{
+        padding: 0;
+        flex-direction: column;
+        div{
+            margin: 1rem 0;
+            padding: 0;
+        }
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice{
+        padding: 0;
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .optionContainerInvoiceBoxTwo {
+        flex-direction: column;
+        margin-top: 0;
+        div{
+            width: 100%;
+            margin: 0.5rem 0;
+        }
+    }
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .optionContainerInvoice .bigDisplayEditInvoice {
+        font-size: 1rem;
+        margin: 0.5rem;
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig{
+        div{
+            padding: 0;
+        }
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .itemsToDisplaybig .itemsToDisplaybigheader{
+        font-size: 0.7rem;
+        margin: 0;
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .dateAndTimeQtybig {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .invoicesContainer .invoiceIDPage .invoiceIDPageContainer .bigDisplayEditInvoice .dateAndTimeQtybig {
+        justify-content: flex-start;
+    }
+
+    @import './formMoblie.scss';
+    
+}

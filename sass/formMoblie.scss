@@ -1,0 +1,40 @@
+.newForm{
+    top:0;
+    left:0;
+    transform: translateX(-100%);
+    width: 100vw;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    .space{
+        background-color: red;
+        margin-top: 10rem;
+    }
+
+    .numberImp{
+        .stats{
+            width: 2rem;
+            font-size: 0.6rem;
+            background-color: transparent;
+        }
+    }
+
+    .sideNavProfile .numberImp .stats h3{
+        margin-bottom: 0;
+        height: 50px;
+        text-align: center;
+        background-color: transparent !important;
+    }
+
+    .newForm .sideNavProfile .sideNavProfile{
+        transition:  all .3s ease;
+        
+        transform: translateY(-100px);
+        padding-top: 100px;
+        
+    }
+    .sideNavProfile #sideNavProfileClosAe{
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}

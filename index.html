@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;300;400;500;700;800;900&display=swap" rel="stylesheet">   
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    
+
+    
+
+    <script src="./js/controllers/controller.js" type="module"></script>
+    <title>Invoice app</title>
+    <link rel="stylesheet" href="./css/style.css">
+  
+</head>
+<body>
+    <div class="rootContainer">
+        <div class="sidebar">
+            <div class="logo">
+                
+                    <img src="./assets/logo.svg" alt="logo" class="logoImg"></img>
+               
+            </div>
+            <div class="downSide">
+                <div class="theme">
+                    <img src="./assets/icon-sun.svg" alt="whitetheme">
+                </div>
+                <div class="profile">
+                    <img src="./assets/image-avatar.jpg" alt="user" class="user">
+                </div>
+            </div>
+        </div>
+        <div class="newForm">
+            <h1 class="newFormHeading">Edit <span class="greyBack">#</span>XM9141</h1>
+            <h1 class="close" data-close="close">X</h1>
+            <form class="formContainer">
+                <h3 class="highLight">Bill Form</h3>
+                <div data-address="bill" class="addressDiv">
+                    <label for="address" class="greyBack">Street Address</label>
+                    <input  type="text" class="address" id="address">
+                </div>
+                <div data-city="bill" class="cityDiv">
+                    <div class="divFormBillBoxs">
+                        <label for="city" class="greyBack">City</label>
+                        <input  type="text" id="city">
+                    </div>
+                    <div class="divFormBillBoxs">
+                        <label for="postCode" class="greyBack">Post Code</label>
+                        <input  type="text" id="postCode">
+                    </div>
+                    <div class="divFormBillBoxs">
+                        <label for="country" class="greyBack">Country</label>
+                        <input  type="text" id="country">
+                    </div>
+                </div>
+                <h3  class="billTo highLight">Bill To</h3>
+                <div data-address="client" class="addressDiv">
+                    <label for="clientName" class="greyBack">Client's Name</label>
+                    <input  type="text" class="address"  id="clientName">
+                </div>
+                <div data-address="client" class="addressDiv">
+                    <label for="clientEmail" class="greyBack">Client's Email</label>
+                    <input  type="email" class="address" id="clientEmail">
+                </div>
+                <div data-address="client" class="addressDiv">
+                    <label for="clientAddress" class="greyBack">Street Address</label>
+                    <input  type="text" class="address" id="clientAddress">
+                </div>
+
+                <div data-city="client" class="cityDiv">
+                    <div class="divFormBillBoxs">
+                        <label for="cityClient" class="greyBack">City</label>
+                        <input  type="text" id="cityClient">
+                    </div>
+                    <div class="divFormBillBoxs">
+                        <label for="postCodeClient" class="greyBack">Post Code</label>
+                        <input  type="text" id="postCodeClient">
+                    </div>
+                    <div class="divFormBillBoxs">
+                        <label for="countryClient" class="greyBack">Country</label>
+                        <input  type="text" id="countryClient">
+                    </div>
+                </div>
+
+                <div class="invoiceDateAndPay">
+                    <div class="dateThree">
+                        <h4 class="greyBack">Invoice Date</h4>
+                        <input id="day" placeholder="Day" type="number">
+                        <input id="month" placeholder="Mon" type="number">
+                        <input id="year" placeholder="Year" type="number">
+                    </div>
+                    <div class="dateThree">
+                        <h4 class="greyBack">Payment Last Date</h4>
+                        <input id="dayLast" placeholder="Day" type="number">
+                        <input id="monthLast" placeholder="Mon" type="number">
+                        <input id="yearLast" placeholder="Year" type="number">
+                    </div>
+
+                </div>
+
+                <div data-address="client" class="addressDiv">
+                    <label for="projectDescription" class="greyBack">Project Description</label>
+                    <input  type="text" class="address" id="projectDescription">
+                </div>
+
+                <div class="itemListForm">
+                    <h3 class="greyBack">Item List</h3>
+                    <div class="itemListBox">
+                        <div class="itemsHeader">
+                            <h4>Item Name</h4>
+                            <h4>Qty</h4>
+                            <h4>Price</h4>
+                            <h4>Total</h4>
+                            <h4>Delete</h4>
+                        </div>
+                        <div class="itemsBoxs">
+                            <input type="text" class="itemsBoxsName" value="Senior Design">
+                            <input type="number" class=itemsBoxsQty value="2">
+                            <input type="number" class="itemsBoxsPrice" value="500">
+                            <input disabled type="number" class="itemsBoxsTotal" value="1000">
+                            <div class="delItem">&#9940;</div>
+                        </div>
+                        <div class="itemsBoxs">
+                            <input type="text" class="itemsBoxsName" value="Web Coding">
+                            <input type="number" class=itemsBoxsQty value="1">
+                            <input type="number" class="itemsBoxsPrice" value="25000">
+                            <input type="number" class="itemsBoxsTotal" value="25000">
+                            <div class="delItem">&#9940;</div>
+                        </div>
+                        <div class="itemsBoxsBtn">
+                            <div class="itemsBoxsBtnAdd">
+                                Add item
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="space"></div>
+                </div>
+
+                <div class="itemListBtns">
+                    <button class="cancel">Cancel</button>
+                    <button  class="saveChanges">Save Changes</button>
+                </div>
+                
+            </form>
+            <!-- user Side -->
+            <!-- <div class="sideNavProfile">
+                <h1 id="sideNavProfileClose">X</h1>
+                <div class="userNameAndImg">
+                    <div class="userPicBig">
+                        <img src="./assets/image-avatar.jpg" alt="user">
+                    </div>
+                    <h1>Mie</h1>
+                </div>
+                <div class="numberImp">
+                 
+                   
+                    <div class="stats"> 
+                        <h3 style=background:#33D69F>Total Paid</h3>
+                        <div class="paidStats">
+                            ₹ 9974.04               
+                        </div>
+                    </div>
+                    <div class="stats"> 
+                        <h3 style=background:#ff910081>Total Pending</h3>
+                        <div class="pendingStats">
+                            ₹ 9974.04                
+                        </div>
+                    </div>
+                    <div  class="stats"> 
+                        <h3  style=background:#373b53>Total Draft</h3>
+                        <div class="DraftStats">
+                            ₹ 9974.04                
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="logout">LogOut</button>
+                <div class="space"></div>
+            </div> -->
+            <!-- user Side -->
+        </div>
+        <div class="invoicesContainer">
+            <!-- invoices -->
+            <!-- <div class="invoices">
+                <div class="header">
+                    <div class="headerName">
+                        <h1>Invoices</h1>
+                        <div class="totalInvoices">7 total invoices</div>
+                    </div>
+                    <div class="headerFilterSide">
+                        <div class="customSelectFilter">
+                            <select>
+                              <option value="0">Created Art</option>
+                              <option value="1">Paid</option>
+                              <option value="2">Pending</option>
+                              <option value="3">Draft</option>
+                              
+                            </select>
+                        </div>
+                        <button class="newBtnInvoice">
+                            <img src="./assets/icon-plus.svg" alt="">
+                            <span>New</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="invoicesLists">
+                    <div class="invoicesItem">
+                        <div class="invoicesItemboxone">
+                            <div class="itemId"><span>#</span>RT3080</div>
+                            <div class="itemDate">Due 19 Aug 2021</div>
+                            <div class="itemName">Jensen Huang</div>
+                        </div>
+                        <div class="invoicesItemboxtwo">
+                            <div class="invoiceAmount">₹ 9974.04</div>
+                            <div class="itemAction">
+                                &bull; Paid >
+                            </div>
+                           
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div> -->
+            <!-- invoices -->
+
+            <!-- login -->
+
+            <!-- <div class="login">
+                <h1>Login To View Your Invoices</h1>
+                <div class="loginContainer">
+                    <form type="submit" class="signInLogin signInForm">
+                        <h1 style="text-align: center;">Login In</h1>
+                        <input required placeholder="Email" type="email">
+                        <input required placeholder="Password" type="password" autocomplete="on">
+                        <button data-login="login" >Login</button>
+                    </form>
+                    <div class="signUpLogin">
+                        <form class="signInLogin signUpForm">
+                            <h1 style="text-align: center;">Sign Up</h1>
+                            <input required placeholder="Email" type="email">
+                            <input required placeholder="Password" type="password" autocomplete="on">
+                            <button data-signup="signup" >Sign Up</button>
+                        </form>
+                    </div>
+                </div>
+            </div> -->
+            <!-- login -->
+
+            <!--invoiceIDPageinvoiceIDPage  -->
+
+            <!-- <div class="invoiceIDPage">
+                <div class="invoiceIDPageContainer">
+                    <div class="backBtn">&#8592; Go Back</div>
+                    <div class="optionContainerInvoice">
+                        <div class="optionContainerInvoiceBox">
+                            <div class="statusDiv">Status</div>
+                            <div class="statusDis">😤 Pending</div>
+                        </div>
+                        <div class="optionContainerInvoiceBoxTwo">
+                            <div class="editBtnBoxTwo">Edit</div>
+                            <div class="deleteBtnBoxTwo">delete</div>
+                            <div class="savePaidBtnBoxTwo">Save As Paid</div>
+                        </div>
+                    </div>
+                    <div class="bigDisplayEditInvoice">
+                        <div class="idNameAdd">
+                            <div class="idNameHash">
+                                <div class="idYESS">#BACA24</div>
+                                <div class="nameidYess">
+                                    UI/UX
+                                </div>
+                            </div>
+                            <div class="placeIdName">
+                                <div class="">Banglore</div>
+                                <div class="">Content</div>
+                                <div class="">54548</div>
+                                <div class="">Country</div>
+                            </div>
+                        </div>
+                        <div class="dateAndTimeQtybig">
+                            <div class="invoiceDateAndTime">
+                                <div class="timeanddatabox1">
+                                    <div class="headTimeanddatabox1">Invoice Date</div>
+                                    <div class="dateHead">Jun 2,2021</div>
+                                </div>
+                                <div class="timeanddatabox1">
+                                    <div class="headTimeanddatabox1">Invoice Date</div>
+                                    <div class="dateHead">Aug 1,2021</div>
+                                </div>
+                            </div>
+                            <div class="invoiceDateAndTime">
+                                <div class="">Banglore</div>
+                                <div class="">Content</div>
+                                <div class="">54548</div>
+                                <div class="">Country</div>
+                            </div>
+                            <div class="emailSendBro">
+                                <div class="">
+                                    <div class="BillBro">
+                                        Bill To
+                                    </div>
+                                    <div class="billEmailBro">
+                                        example@bro.com
+                                    </div>
+                                </div>
+                                <div class="blockBro"></div>
+                            </div>
+                        </div>
+                        <div class="itemsToDisplaybig">
+                            <div class="itemsToDisplaybigheader">
+                                <div class="nameDisItems">Item Name</div>
+                                <div class="namesQtyAndStuff">
+                                    <div class="qtyStuff">
+                                        Qty
+                                    </div>
+                                    <div class="qtyStuff">
+                                        Price
+                                    </div>
+                                    <div class="qtyStuff">
+                                        Total
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itemsToDisplaybigheader">
+                                <div class="nameDisItems">Coding</div>
+                                <div class="namesQtyAndStuff">
+                                    <div data-qtyStuff="qtyStuff" class="qtyStuff">
+                                        1
+                                    </div>
+                                    <div data-qtyPrice="price" class="qtyStuff">
+                                        ₹9000
+                                    </div>
+                                    <div data-qtyTotal="total" class="qtyStuff">
+                                        9000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="itemsToDisplaybigheader">
+                                <div class="nameDisItems">Web</div>
+                                <div class="namesQtyAndStuff">
+                                    <div data-qtyStuff="qtyStuff" class="qtyStuff">
+                                        2
+                                    </div>
+                                    <div data-qtyPrice="price" class="qtyStuff">
+                                        ₹10000
+                                    </div>
+                                    <div data-qtyTotal="total" class="qtyStuff">
+                                        20000
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="amountStuff" data-amountStuff>
+                                <div class="amountStuffText">Amount Due</div>
+                                <div class="amountStuffNum">29000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!--invoiceIDPageinvoiceIDPage  -->
+
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>
